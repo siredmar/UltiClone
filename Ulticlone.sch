@@ -7760,6 +7760,14 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+24V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="VCC/2">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.905" x2="0" y2="1.778" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC/2" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+5V" prefix="P+">
@@ -7792,6 +7800,19 @@ Source: AVX .. aphvc.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+24V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCC/2" prefix="P+">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VCC/2" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10796,6 +10817,24 @@ NS Package M08A</description>
 <text x="-2.74" y="1.88" size="1.27" layer="25">&gt;NAME</text>
 <text x="-3.025" y="-2.935" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="SW-SPDT-4MS1R202BM6NQNS">
+<pad name="2" x="0" y="0" drill="0.6" diameter="1.4224"/>
+<pad name="3" x="-2.54" y="0" drill="0.6" diameter="1.4224"/>
+<pad name="1" x="2.54" y="0" drill="0.6" diameter="1.4224"/>
+<pad name="GND@2" x="-2.54" y="-5.08" drill="0.6" diameter="1.4224"/>
+<pad name="GND@1" x="2.54" y="-5.08" drill="0.6" diameter="1.4224"/>
+<wire x1="-5" y1="1.5" x2="5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="5" y1="1.5" x2="5" y2="-7" width="0.127" layer="21"/>
+<wire x1="-5" y1="1.5" x2="-5" y2="-7" width="0.127" layer="21"/>
+<wire x1="-5" y1="-7" x2="5" y2="-7" width="0.127" layer="21"/>
+<wire x1="-7.5" y1="-7" x2="-6" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="7.5" y1="-7" x2="6" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="6" y1="-11.5" x2="-6" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="-7.5" y1="-7" x2="-5" y2="-7" width="0.127" layer="21"/>
+<wire x1="5" y1="-7" x2="7.5" y2="-7" width="0.127" layer="21"/>
+<text x="7" y="-6" size="1.27" layer="25" rot="R90">&gt;name</text>
+<text x="8.5" y="-6" size="1.27" layer="27" rot="R90">&gt;value</text>
+</package>
 </packages>
 <symbols>
 <symbol name="SUP_CON">
@@ -10843,6 +10882,18 @@ NS Package M08A</description>
 <wire x1="-4.064" y1="-1.27" x2="-3.048" y2="-1.27" width="0.254" layer="94"/>
 <text x="-2.794" y="2.286" size="1.27" layer="95">&gt;NAME</text>
 <text x="-2.794" y="-3.548" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="SW-SPDT">
+<pin name="2" x="-5.08" y="0" visible="pin" length="short"/>
+<pin name="3" x="5.08" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="1" x="5.08" y="-2.54" visible="pin" length="short" rot="R180"/>
+<circle x="-2.54" y="0" radius="0.4572" width="0.254" layer="94"/>
+<circle x="-2.54" y="0" radius="0.4572" width="0.254" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.4572" width="0.254" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.4572" width="0.254" layer="94"/>
+<wire x1="-2.0828" y1="0" x2="2.0574" y2="2.286" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="95">&gt;name</text>
+<text x="-2.54" y="-7.62" size="1.778" layer="96">&gt;value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10902,6 +10953,29 @@ C Pol
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
 <connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SW-SPDT-4MS1R202BM6NQNS" prefix="SW" uservalue="yes">
+<description>&lt;b&gt;RS Pro 4MS1R202BM6NQNS Wippschalter 1-poliger Umschalter, Ein-Ein, schwarz&lt;/b&gt;&lt;br&gt;
+RS Best.-Nr.734-6918&lt;br&gt;
+MarkeRS Pro &lt;br&gt;
+Herst. Teile-Nr.4MS1R202BM6NQNS&lt;br&gt;
+
+&lt;a href&gt;https://de.rs-online.com/web/p/wippschalter/7346918/?searchTerm=734-6918&amp;relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E283F69292852537C5253207C52532D293F5C647B337D285C73293F5B5C732D2F255C2E2C5D285C73293F5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D3733342D36393138267374613D3733343639313826&gt; &lt;/a&gt;</description>
+<gates>
+<gate name="SW" symbol="SW-SPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SW-SPDT-4MS1R202BM6NQNS">
+<connects>
+<connect gate="SW" pin="1" pad="1"/>
+<connect gate="SW" pin="2" pad="2"/>
+<connect gate="SW" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11069,14 +11143,14 @@ C Pol
 <part name="P+18" library="supply1" deviceset="+24V" device=""/>
 <part name="Q4" library="transistor-pnp" deviceset="BC807*" device="SMD" technology="-16"/>
 <part name="GND41" library="supply1" deviceset="GND" device=""/>
-<part name="R34" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
-<part name="R35" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R34" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R35" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="IC2" library="linear" deviceset="*555" device="D" technology="LM"/>
 <part name="C34" library="rcl" deviceset="C-EU" device="C0603K" value="100n"/>
 <part name="C35" library="rcl" deviceset="C-EU" device="C0603K" value="100n"/>
 <part name="C36" library="rcl" deviceset="C-EU" device="C0603K" value="100n"/>
-<part name="R36" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
-<part name="R37" library="rcl" deviceset="R-EU_" device="R0603" value="100"/>
+<part name="R36" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
+<part name="R37" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="GND42" library="supply1" deviceset="GND" device=""/>
 <part name="GND43" library="supply1" deviceset="GND" device=""/>
 <part name="GND44" library="supply1" deviceset="GND" device=""/>
@@ -11097,6 +11171,11 @@ C Pol
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
 <part name="GND49" library="supply1" deviceset="GND" device=""/>
 <part name="GND50" library="supply1" deviceset="GND" device=""/>
+<part name="R38" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="R39" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
+<part name="GND51" library="supply1" deviceset="GND" device=""/>
+<part name="P+23" library="supply1" deviceset="VCC/2" device=""/>
+<part name="SW1" library="SchlegelAr_Master" deviceset="SW-SPDT-4MS1R202BM6NQNS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11346,6 +11425,11 @@ LED</text>
 <instance part="GND48" gate="1" x="454.66" y="-7.62"/>
 <instance part="GND49" gate="1" x="464.82" y="-7.62"/>
 <instance part="GND50" gate="1" x="474.98" y="-7.62"/>
+<instance part="R38" gate="G$1" x="502.92" y="-2.54" rot="R270"/>
+<instance part="R39" gate="G$1" x="502.92" y="-17.78" rot="R270"/>
+<instance part="GND51" gate="1" x="502.92" y="-27.94"/>
+<instance part="P+23" gate="G$1" x="502.92" y="10.16"/>
+<instance part="SW1" gate="SW" x="487.68" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -11849,6 +11933,11 @@ LED</text>
 <pinref part="GND50" gate="1" pin="GND"/>
 <wire x1="474.98" y1="-5.08" x2="474.98" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R39" gate="G$1" pin="2"/>
+<wire x1="502.92" y1="-22.86" x2="502.92" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="GND51" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -12004,6 +12093,15 @@ LED</text>
 <wire x1="104.14" y1="149.86" x2="101.6" y2="149.86" width="0.1524" layer="91"/>
 <label x="101.6" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC1" gate="1" pin="PK6(ADC14/PCINT22)"/>
+</segment>
+<segment>
+<pinref part="R38" gate="G$1" pin="2"/>
+<pinref part="R39" gate="G$1" pin="1"/>
+<wire x1="502.92" y1="-7.62" x2="502.92" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="502.92" y1="-10.16" x2="502.92" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="502.92" y1="-10.16" x2="505.46" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="502.92" y="-10.16"/>
+<label x="505.46" y="-10.16" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ADC13" class="0">
@@ -12988,6 +13086,7 @@ LED</text>
 <pinref part="C37" gate="G$1" pin="+"/>
 <wire x1="444.5" y1="5.08" x2="444.5" y2="7.62" width="0.1524" layer="91"/>
 <junction x="444.5" y="7.62"/>
+<pinref part="SW1" gate="SW" pin="2"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -13055,6 +13154,17 @@ LED</text>
 <wire x1="307.34" y1="68.58" x2="307.34" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="J11" gate="-2" pin="S"/>
 <wire x1="307.34" y1="58.42" x2="304.8" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC/2" class="0">
+<segment>
+<pinref part="R38" gate="G$1" pin="1"/>
+<wire x1="502.92" y1="2.54" x2="502.92" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="P+23" gate="G$1" pin="VCC/2"/>
+<pinref part="SW1" gate="SW" pin="1"/>
+<wire x1="502.92" y1="5.08" x2="502.92" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="492.76" y1="5.08" x2="502.92" y2="5.08" width="0.1524" layer="91"/>
+<junction x="502.92" y="5.08"/>
 </segment>
 </net>
 </nets>
